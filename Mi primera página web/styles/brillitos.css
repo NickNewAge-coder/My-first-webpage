@@ -1,0 +1,289 @@
+:root {
+  --clr-black :#000000;
+  --clr-white :#ffffff;
+  --clr-light: #9bd5ea;
+  --clr-grass: #77ca4a;
+  --clr-wood: #61794a;
+  --clr-sea: #298486;
+  --clr-idk: #2e3e47;
+  --clr-blue: #00539f;
+  --clr-light: #A9DDFE;
+    --clr-blue: #002C6D;
+    --clr-crown: #FCCD00;
+    --clr-jewel: #EB0401;
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --thulian-pink: #E370ABff;
+    --mimi-pink: #F2D1E4ff;
+    --sunglow: #FFCC32ff;
+    --plum: #8C3896ff;
+    --mulberry: #D3489Bff;
+    --night: #0C0C0Eff;
+    --light-green: #A0E281ff;
+    --blue-green: #0099CBff;
+    --kelly-green: #50A626ff;
+    --apricot: #FED3C0ff;
+    --black: #030302ff;
+    --white: #FFFFFFff;
+    --off-red-rgb: #EE0402ff;
+    --engineering-orange: #CD0201ff;
+    --sienna: #8A3D1Fff;
+    --black: #040004ff;
+    --gold: #FBD11Cff;
+    --sienna: #71301Cff;
+    --white: #FCFBFCff;
+    --keppel: #63BDA4ff;
+--nyanza: #D6FFDDff;
+--aureolin: #F6E335ff;
+--electric-blue: #21E6F6ff;
+--red-crayola: #F70051ff;
+--black: #000000ff;
+--white: #FFFFFFff;
+--white: #FCFCFEff;
+    --night: #0D0C11ff;
+    --yinmn-blue: #2E5780ff;
+    --falu-red: #750F11ff;
+    --raisin-black: #272224ff;
+}
+html{
+  background-image: url("OOO.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+}
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+} 
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.atLogo {
+  padding: 20px 100px 20px; 
+  border: 5px solid var(--clr-black);
+  background-color: var(--clr-blue);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  height: fit-content;
+}
+    .atLogo img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+    }
+
+/* Esta es la parte de personajes, ergo acá termina el título*/
+
+.Cast{
+  color: var(--clr-white);
+  text-align: center;
+  font-weight: 100;
+  font-size: 50px;
+  border: 5px solid var(--clr-wood);
+  background-color: var(--clr-grass);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0px 50px;
+}
+    .container{
+      margin: 20px;
+      background-color: var(--clr-grass);
+      border: 5px solid black;
+      display: grid;
+      grid-template-rows: 326px 326px; 
+      grid-template-columns: 400px 400px 400px;
+    }
+    .container img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+/*Items*/
+
+.item{
+  width: 100%;
+  height: 100%;
+}
+
+      .Finn{
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        background-color: #ffffff;
+      }
+      .Jake{
+        grid-row: 1 / 1;
+        grid-column: 2/ 2;
+        background-color: #FDCA03;
+      }
+      .BMO{
+        grid-row: 1 / 1;
+        grid-column: 3 / 3;
+        background-color: #66BFA6;
+      }
+      .Marceline{
+        grid-row: 2 / 2;
+        grid-column: 1 / 1;
+        background-color: #8A96A0;
+      }
+      .PB{
+        grid-row: 2 / 2;
+        grid-column: 2 / 2;
+        background-color: #E46FAA;
+
+      }
+      .Ice-King{
+        grid-row: 2 / 2;
+        grid-column: 3 / 3;
+        background-color: #B1D9F3;
+      }
+      /* Hover states */
+
+      .Finn img, .Jake img, .BMO img{
+        transition: transform 0.5s ease;
+      }
+
+      .Finn:hover img, .Jake:hover img, .BMO:hover img{
+        transform: translateY(326px);
+      }
+
+      .Marceline img, .PB img, .Ice-King img{
+        transition: transform 0.5s ease;
+      }
+
+      .Marceline:hover img, .PB:hover img, .Ice-King:hover img{
+        transform: translateY(-326px);
+      }
+      /* Hover states */
+/* Nombres escondidos detras de las imágenes*/      
+.Finn::before{
+  box-sizing:content-box;
+  content: "Finn";
+  position:absolute;
+  width: 400px;
+  height: 326px;
+  display: flex ;
+  background-color: white;
+  color: var(--off-red-rgb);
+  text-shadow: 3px 1px 2px var(--falu-red);
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+}
+.Finn:hover::before{
+  opacity: 1;
+  }
+  
+.Jake::before{
+    box-sizing:content-box;
+    content: "Jake";
+    position:absolute;
+    width: 400px;
+    height: 326px;
+    display: flex ;
+    background-color: #FDCA03;
+    color: var(--clr-white);
+    text-shadow: 2px 2px 2px var(--black);
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+  }
+  .Jake:hover::before{
+    opacity: 1;
+    }
+
+.BMO::before{
+      box-sizing:content-box;
+      content: "BMO";
+      position:absolute;
+      width: 400px;
+      height: 326px;
+      display: flex ;
+      background-color: #66BFA6;
+      color: var(--nyanza);
+      text-shadow: 2px 3px 2px var(--blue-green);
+      font-size: 60px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+    }
+    .BMO:hover::before{
+      opacity: 1;
+      }  
+
+.Marceline::before{
+        box-sizing:content-box;
+        content: "Marceline";
+        position:absolute;
+        width: 400px;
+        height: 326px;
+        display: flex ;
+        background-color: #8A96A0;
+        color: var(--white);
+        text-shadow: 2px 3px 2px var(--yinmn-blue);
+        font-size: 60px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+      }
+      .Marceline:hover::before{
+        opacity: 1;
+        }  
+
+  .PB::before{
+          box-sizing:content-box;
+          content: "Princess Bubblegum";
+          position:absolute;
+          width: 400px;
+          height: 326px;
+          display: flex ;
+          background-color: #E46FAA;
+          color: var(--mimi-pink);
+          text-shadow: 2px 3px 2px var(--mulberry);
+          font-size: 60px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          opacity: 0;
+        }
+        .PB:hover::before{
+          opacity: 1;
+          }  
+  
+    .Ice-King::before{
+            box-sizing:content-box;
+            content: "Ice King";
+            position:absolute;
+            width: 400px;
+            height: 326px;
+            display: flex ;
+            background-color: #B1D9F3;
+            color: var(--clr-crown);
+            text-shadow: 2px 2px 4px var(--clr-jewel);
+            font-size: 60px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+          }
+          .Ice-King:hover::before{
+            opacity: 1;
+            } 
